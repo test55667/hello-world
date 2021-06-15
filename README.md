@@ -1,5 +1,14 @@
-# hello-world
-Hello world project
-Hi Humans,
+name: shell commands
 
-I am Vinto and learning github, this is test project
+on: [Push]
+
+Jobs:
+  run-shell-commands:
+    runs-on: ubentu-latest
+    steps:
+      - name: echo a string
+        run: echo "hello world"
+      - name: multiple string
+        run: |
+          node -v
+          npm -v
